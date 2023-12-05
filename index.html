@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width", initial-scale=1.0">
+        <title>Girls Bench</title>
+
+        <style>
+            header {display: flex;
+                width: 100%;
+                height: 210px;
+                background-color: #FF66C4;
+                color: black;
+            }
+            .logo1 {
+                display: flex;
+                width: 220px;
+                height: 190px;
+                margin-top: 15px;
+                margin-left: 10%;
+                margin:8px;   
+            }
+            .menu {
+                width: 100%;
+                height: 50px;
+                margin-top: 53px;
+            }
+            .menu ul {
+                list-style: none;
+                position: relative;
+            }
+            .menu ul li {
+                width: 150px;
+                float: left;
+            }
+            .menu a {
+                padding: 15px;
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                background-color:deeppink;
+                border-radius: 20px;
+                color: #fff;
+            }
+                    
+            .menu ul ul {
+                position: absolute;
+                visibility: hidden;
+            }
+
+            .menu ul li:hover ul {
+                visibility: visible;
+            }
+
+            .menu a:hover {
+                background-color:plum;
+                color: #555;
+            }
+
+            .menu ul ul li {
+            float: none;
+            border-bottom: solid 1px #ccc;
+            }
+
+            .menu ul ul li a {
+            background-color:palevioletred;
+            }
+
+            label[for=”bt_menu”]{
+                padding: 5px;
+                background-color: #222;
+                color: #fff;
+                font-family: Arial;
+                text-align: center;
+                font-size: 30px;
+                cursor: pointer;
+                height: 50px;
+            }
+
+            #bt_menu {
+                display: none;
+            }
+
+            label[for=”bt_menu”]{
+                display: none;
+            }
+
+            @media(max-width: 800px) {
+                label[for=”bt_menu”] {
+                display: block;
+            }
+            
+            #bt_menu:checked ~ .menu{
+                margin-left: 0;
+            }
+            
+            .menu{
+                margin-top: 2px;
+                margin-left: -65%;
+                transition: all .2s;
+            }
+            
+            .menu ul li {
+                width: 100%;
+                
+                float: none;
+            }
+            
+            .menu ul ul {
+                position: static;
+                overflow: hidden;
+                max-height: 0;
+                transition: all 2s;
+            }
+            
+            .menu ul li:hover ul {
+                height: auto;
+                max-height: 200px;
+            }
+            
+            }
+            .divBusca {
+                display: flex;
+                border: 5px solid darkmagenta;
+                border-radius:10px;
+                width:300px;
+                height:32px;
+                align-items: center;
+                justify-content: center;
+                margin: -48px;
+                margin-left: 1100px;
+            }
+            #txtBusca{
+                display: flex;
+                float:right;
+                background-color:transparent;
+                padding-left:5px;
+                font-size:15px;
+                border:none;
+                height:32px;
+                text-decoration: #ccc;
+                width:191px;  
+                align-items: center;  
+            }
+
+            #btnBusca{
+                display: flex;
+                align-items: center;
+                border:none;
+                float:right;
+                height:32px;
+                border-radius:0 7px 7px 0;
+                width:100px;
+                font-weight:bold;
+                background-color:lightpink;
+                color: black;    
+                text-align: center;
+                justify-content: center;  
+                
+            }
+
+            body {
+                background-color: #5e17eb;
+            }
+            .container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .textos {
+                display: flex; 
+                flex-direction: column; 
+                align-items: flex-start; 
+                font-family: 'Poppins', sans-serif;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            .texto1 {
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 100px;
+                color: hotpink;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                
+            }
+
+            .texto2 {
+                font-size: 24px; 
+                color: white; 
+            }
+
+            .imagem1 {
+                display: inline-block;
+            }
+
+            #btnAbraSuaConta {
+                display: center;
+                background-color: hotpink;
+                color: black;
+                border: none;
+                padding: 15px; 
+                border-radius: 5px;
+                cursor: pointer;
+                text-decoration: none; 
+                font-size: 32px;
+                border-radius:10px;
+            }
+
+            #btnAbraSuaConta:hover {
+                background-color: deeppink;
+            }
+
+    
+    </style>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+
+    </head>
+    <body>
+        <header>
+            <img class="logo1" src="be.png">
+            <div class="menus1">
+                <input type="checkbox" id="bt_menu" />
+                <label for="bt_menu">&#9776;</label>
+                <nav class="menu">
+                        <ul>
+                            <li><a href="girl.html">Girl Bench</a></li>
+                            <li><a href="#">Pedir Cartão</a>
+                            <li><a href="cards.html">Serviços</a></li>
+                            <li><a href="painel_controle.html">Painel de Controle</a></li>
+                            <li><a href="nós.html">Quem somos?</a></li>
+                        </ul>
+                </nav>
+                <div class="divBusca">
+                    <input type="text" id="txtBusca" placeholder="Buscar..."/>
+                    <button id="btnBusca">Buscar</button>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="textos">
+                <p class="texto1">GIRL<br>BENCH</p>
+                <p class="texto2">Um banco digital que faz seu dinheiro render<br> e facilita realização dos seus sonhos!<br> Junte-se a nós</p>
+                <button id="btnAbraSuaConta" onclick="window.location.href='login.html'">Abra sua conta</button>
+            </div>
+            <img class="imagem1" src="imagem1.png">
+        </div>
+    </body>
+    </html>
